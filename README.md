@@ -76,7 +76,7 @@ Use $github-readme-generator to create a polished README for this repository.
 Copy or reference the folder in your project and ask Claude Code to read:
 
 ```text
-Use github-readme-generator/CLAUDE.md to create a polished README for this repository.
+Use CLAUDE.md to create a polished README for this repository.
 ```
 
 ### OpenCode And Other Agents
@@ -84,7 +84,7 @@ Use github-readme-generator/CLAUDE.md to create a polished README for this repos
 Point the agent at:
 
 ```text
-github-readme-generator/AGENTS.md
+AGENTS.md
 ```
 
 The shared instructions route the agent to the same workflow, references, and draft renderer.

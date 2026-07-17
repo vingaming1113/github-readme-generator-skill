@@ -2,7 +2,7 @@
 
 Use this folder to create or improve GitHub README.md files for repositories, profile READMEs, organization READMEs, libraries, CLIs, apps, and templates.
 
-Start with `SKILL.md` for the workflow and quality bar. Read `references/readme-playbook.md` for repository-specific strategy, `references/badges-and-stats.md` for Shields.io and GitHub Stats Extended patterns, and `references/resource-catalog.md` when choosing external README polish resources. Use the renderer in `scripts/` when a deterministic first draft is useful, then edit the README for repository-specific accuracy.
+Start with `github-readme-generator/SKILL.md` for the workflow and quality bar. Read `github-readme-generator/references/readme-playbook.md` for repository-specific strategy, `github-readme-generator/references/badges-and-stats.md` for Shields.io and GitHub Stats Extended patterns, and `github-readme-generator/references/resource-catalog.md` when choosing external README polish resources. Use the renderer in `github-readme-generator/scripts/` when a deterministic first draft is useful, then edit the README for repository-specific accuracy.
 
 Core behavior:
 

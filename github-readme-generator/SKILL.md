@@ -46,8 +46,8 @@ The renderer is implemented in Rust and compiled on demand by `scripts/render_re
 ## Agent Entry Points
 
 - Codex/OpenAI: use `SKILL.md` and `agents/openai.yaml`.
-- Claude Code: start from `CLAUDE.md`, which points back to this workflow.
-- OpenCode and other coding agents: start from `AGENTS.md`, then load this file and the referenced badge guide as needed.
+- Claude Code: start from the repository root `CLAUDE.md`, which points back to this workflow.
+- OpenCode and other coding agents: start from the repository root `AGENTS.md`, then load this file and the referenced badge guide as needed.
 - Generic use: if an agent does not support skill discovery, paste or point it to this folder and ask it to follow `SKILL.md`.
 
 ## README Quality Bar
