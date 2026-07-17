@@ -1,6 +1,6 @@
 ---
 name: github-readme-generator
-description: Generate polished GitHub README.md files for repositories, profile READMEs, libraries, CLIs, apps, tools, and templates. Use when Codex needs to create or improve a README with clear positioning, installation and usage sections, Shields.io badges, GitHub stats cards, project structure, screenshots/media placeholders, contribution notes, or fast README automation for an existing codebase.
+description: Generate polished GitHub README.md files for repositories, profile READMEs, libraries, CLIs, apps, tools, and templates. Use when an AI coding agent such as Codex, Claude Code, OpenCode, Cursor, Cline, Aider, Continue, or another agent needs to create or improve a README with clear positioning, installation and usage sections, Shields.io badges, GitHub stats cards, project structure, screenshots/media placeholders, contribution notes, or fast README automation for an existing codebase.
 ---
 
 # GitHub README Generator
@@ -18,7 +18,7 @@ Create high-quality GitHub README files quickly by combining repository inspecti
    - Organization README: focus on mission, maintained projects, contribution paths, support, and governance.
 3. Choose a visual system. Use a small, consistent set of badges and cards; avoid badge walls, huge centered art, and stats blocks that bury the actual project.
 4. Draft a README that is scannable in the first screen: title, one-line value proposition, compact badges, concise overview, and a fast-start path.
-5. Use `scripts/render_readme.py` when a deterministic first draft is useful, then edit the output for repository-specific accuracy and tone.
+5. Use the bundled renderer in `scripts/` when a deterministic first draft is useful, then edit the output for repository-specific accuracy and tone.
 6. Verify all commands, links, anchors, badge URLs, and generated stats URLs before finalizing.
 
 ## Fast Draft Script
@@ -38,6 +38,13 @@ python3 scripts/render_readme.py \
 ```
 
 If the user asked for a profile README, add `--profile`. If the repository is not public yet, keep Shields.io and stats image URLs only when they will resolve after publication.
+
+## Agent Entry Points
+
+- Codex/OpenAI: use `SKILL.md` and `agents/openai.yaml`.
+- Claude Code: start from `CLAUDE.md`, which points back to this workflow.
+- OpenCode and other coding agents: start from `AGENTS.md`, then load this file and the referenced badge guide as needed.
+- Generic use: if an agent does not support skill discovery, paste or point it to this folder and ask it to follow `SKILL.md`.
 
 ## README Quality Bar
 
