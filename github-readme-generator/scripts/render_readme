@@ -4,9 +4,21 @@ set -euo pipefail
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 source_file="${script_dir}/render_readme.rs"
 binary="${TMPDIR:-/tmp}/github-readme-generator-render-readme"
+lock_dir="${binary}.lock"
 
 if [[ ! -x "${binary}" || "${source_file}" -nt "${binary}" ]]; then
-  rustc "${source_file}" -O -o "${binary}"
+  while [[ ! -x "${binary}" || "${source_file}" -nt "${binary}" ]]; do
+    if mkdir "${lock_dir}" 2>/dev/null; then
+      build_binary="$(mktemp "${binary}.XXXXXX")"
+      trap 'rm -f "${build_binary}"; rmdir "${lock_dir}" 2>/dev/null || true' EXIT
+      rustc "${source_file}" -o "${build_binary}"
+      mv "${build_binary}" "${binary}"
+      rmdir "${lock_dir}"
+      trap - EXIT
+      break
+    fi
+    sleep 0.1
+  done
 fi
 
 exec "${binary}" "$@"

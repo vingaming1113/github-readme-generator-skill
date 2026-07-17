@@ -18,7 +18,7 @@
 
 ## What It Does
 
-`github-readme-generator` is a portable AI-agent skill pack for creating READMEs that look like someone cared: tight positioning, useful badge rows, clean quick starts, project-specific commands, and GitHub Stats Extended cards when they add value.
+`github-readme-generator` is a portable AI-agent skill pack for creating READMEs that look like someone cared: tight positioning, useful badge rows, clean quick starts, project-specific commands, conditional sections, visual polish, and GitHub Stats Extended cards when they add value.
 
 It works as a Codex skill, a Claude Code instruction pack, an OpenCode/AGENTS.md workflow, or a plain folder any coding agent can read.
 
@@ -42,6 +42,10 @@ This repository README is intentionally written in the same style the skill teac
   <tr>
     <td><strong>Agent-ready workflow</strong></td>
     <td>Instructions are short enough to load, specific enough to steer, and portable across agents.</td>
+  </tr>
+  <tr>
+    <td><strong>Repository-aware output</strong></td>
+    <td>The Rust renderer detects package metadata, docs, examples, screenshots, CI, env files, Docker, licenses, and community files.</td>
   </tr>
 </table>
 
@@ -92,6 +96,9 @@ github-readme-generator/scripts/render_readme \
   --project . \
   --owner YOUR_GITHUB_USER \
   --repo YOUR_REPO \
+  --template auto \
+  --screenshot docs/screenshot.png \
+  --demo https://your-demo.example \
   --output README.md
 ```
 
@@ -113,6 +120,8 @@ github-readme-generator/scripts/render_readme \
 | `AGENTS.md` | Portable entry point for OpenCode, Cursor, Cline, Aider, Continue, and other agents |
 | `CLAUDE.md` | Claude Code entry point |
 | `references/badges-and-stats.md` | Shields.io and GitHub Stats Extended URL patterns |
+| `references/readme-playbook.md` | Repository intelligence pass, type matrix, section recipes, and quality checklist |
+| `references/resource-catalog.md` | Curated README resources adapted from AwesomeREADME categories |
 | `scripts/render_readme` | Deterministic Rust first-draft renderer |
 | `agents/openai.yaml` | OpenAI/Codex UI metadata |
 
