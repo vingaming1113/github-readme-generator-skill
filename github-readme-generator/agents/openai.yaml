@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub README Generator"
+  short_description: "Generate polished GitHub README files fast"
+  default_prompt: "Use $github-readme-generator to create a polished GitHub repository README with badges, stats, and installation examples."
