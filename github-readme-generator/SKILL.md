@@ -26,7 +26,7 @@ Create high-quality GitHub README files quickly by combining repository inspecti
 Use the bundled script to generate a strong starting point from metadata and explicit inputs:
 
 ```bash
-python3 scripts/render_readme.py \
+scripts/render_readme \
   --project /path/to/repo \
   --owner OWNER \
   --repo REPO \
@@ -37,7 +37,7 @@ python3 scripts/render_readme.py \
   --output /path/to/repo/README.md
 ```
 
-If the user asked for a profile README, add `--profile`. If the repository is not public yet, keep Shields.io and stats image URLs only when they will resolve after publication.
+The renderer is implemented in Rust and compiled on demand by `scripts/render_readme`. If the user asked for a profile README, add `--profile`. If the repository is not public yet, keep Shields.io and stats image URLs only when they will resolve after publication.
 
 ## Agent Entry Points
 

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+source_file="${script_dir}/render_readme.rs"
+binary="${TMPDIR:-/tmp}/github-readme-generator-render-readme"
+
+if [[ ! -x "${binary}" || "${source_file}" -nt "${binary}" ]]; then
+  rustc "${source_file}" -O -o "${binary}"
+fi
+
+exec "${binary}" "$@"

@@ -2,7 +2,7 @@
 <p align="center"><strong>Give any AI coding agent a repeatable way to ship beautiful GitHub READMEs in seconds.</strong></p>
 <p align="center">
   <img alt="AI Agents" src="https://img.shields.io/badge/AI%20Agents-Codex%20%7C%20Claude%20Code%20%7C%20OpenCode-7c3aed?style=for-the-badge" />
-  <img alt="README Generator" src="https://img.shields.io/badge/README-generator-2ea44f?style=for-the-badge" />
+  <img alt="Rust Renderer" src="https://img.shields.io/badge/Rust-renderer-b7410e?style=for-the-badge&logo=rust&logoColor=white" />
   <img alt="Shields.io" src="https://img.shields.io/badge/Shields.io-badges-111827?style=for-the-badge" />
   <a href="https://github.com/vingaming1113/github-readme-generator-skill/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/vingaming1113/github-readme-generator-skill?style=for-the-badge" /></a>
 </p>
@@ -88,7 +88,7 @@ The shared instructions route the agent to the same workflow, references, and dr
 ## Generate A Draft
 
 ```bash
-python3 github-readme-generator/scripts/render_readme.py \
+github-readme-generator/scripts/render_readme \
   --project . \
   --owner YOUR_GITHUB_USER \
   --repo YOUR_REPO \
@@ -98,7 +98,7 @@ python3 github-readme-generator/scripts/render_readme.py \
 Profile README:
 
 ```bash
-python3 github-readme-generator/scripts/render_readme.py \
+github-readme-generator/scripts/render_readme \
   --profile \
   --owner YOUR_GITHUB_USER \
   --name "Your Name" \
@@ -113,7 +113,7 @@ python3 github-readme-generator/scripts/render_readme.py \
 | `AGENTS.md` | Portable entry point for OpenCode, Cursor, Cline, Aider, Continue, and other agents |
 | `CLAUDE.md` | Claude Code entry point |
 | `references/badges-and-stats.md` | Shields.io and GitHub Stats Extended URL patterns |
-| `scripts/render_readme.py` | Deterministic first-draft renderer |
+| `scripts/render_readme` | Deterministic Rust first-draft renderer |
 | `agents/openai.yaml` | OpenAI/Codex UI metadata |
 
 ## Stats And Badges
